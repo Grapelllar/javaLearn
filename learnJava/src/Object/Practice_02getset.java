@@ -2,14 +2,14 @@ package Object;
 
 public class Practice_02getset {
 	public static void main(String[] args) {
-		Person ming = new Person();
+		Person3 ming = new Person3();
 		ming.setName("xiaoming");
 		ming.setAge(12);
 		System.out.println(ming.getAge());
 	}
 }
 
-class Person {
+class Person3 {
 	private String name;
 	private int age;
 
