@@ -8,12 +8,16 @@ public class Inner {
 		Outer.Inner inner = outer.new Inner();
 		inner.hello();
 		outer.asyncHello();
+		Outer.StaticNested nest = new Outer.StaticNested();
+		nest.hello();
 	}
 
 }
 
 class Outer{
 	private String name;
+	
+	private static String NAME = "STATIC";
 	
 	Outer(String name){
 		this.name = name;
@@ -37,4 +41,13 @@ class Outer{
 		};
 		new Thread(r).start();
 	}
+	
+	//static Nested Class
+	static class StaticNested{
+		void hello() {
+			System.out.println("Hello," + Outer.NAME);
+		}
+	}
+	
+
 }
